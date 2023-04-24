@@ -26,7 +26,7 @@ pipeline{
 	{
            steps{
 			// cloning project into jekins/workspace/     this process happens everytime
-              sh ' git clone https://gitlab.com/anuroopps1999/html_project.git -b master'
+              sh ' git clone https://github.com/anuroopps/Web_Server_jenkins.git -b main'
 	   }
 	}
 	stage('deploy')
