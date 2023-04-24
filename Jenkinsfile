@@ -7,10 +7,16 @@ pipeline{
               sh 'pwd'
 	   }
 	}
+	   statge('permissions'){
+		   steps{
+			   sh ' sudo chown -R jenkins:jenkins /var/www/html/'
+			   sh ' sudo chmod -R 777 /var/www/html/'
+		   }
+	   }
 	stage('clean workspace')
 	{
            steps{
-              sh ' rm -r *'
+              sh ' rm -r html_project/*'
 			//   cleaning workspace in www/html/*     i.e, index.html file in html folder
 			//   rm -r /var/lib/jenkins/workspace/htlm_project/www/html
 			  sh 'rm -r ../../../../www/html/*'
