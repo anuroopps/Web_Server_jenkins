@@ -7,7 +7,7 @@ pipeline{
               sh 'pwd'
 	   }
 	}
-	   statge('permissions'){
+	   stage('permissions'){
 		   steps{
 			   sh ' sudo chown -R jenkins:jenkins /var/www/html/'
 			   sh ' sudo chmod -R 777 /var/www/html/'
