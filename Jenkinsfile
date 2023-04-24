@@ -27,9 +27,9 @@ pipeline{
 	stage('deploy')
 	{
            steps{
-		   sh 'cd Web_server_jenkins'
+		   sh 'cd html_prpject'
 		   sh ' mv * ..'
-		   sh 'rm -r Web_server_jenkins'
+		   sh 'rm -r html_project'
 		   
 			// now moving the project back into var/www/html
               sh ' mv html_project/* ../../../../www/html '
