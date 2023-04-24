@@ -11,7 +11,7 @@ pipeline{
 	stage('clean workspace')
 	{
            steps{
-              sh ' rm -r html_project/*'
+              sh ' rm -r *'
 			//   cleaning workspace in www/html/*     i.e, index.html file in html folder
 			//   rm -r /var/lib/jenkins/workspace/htlm_project/www/html
 			
