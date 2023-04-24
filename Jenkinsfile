@@ -27,7 +27,7 @@ pipeline{
 	stage('deploy')
 	{
            steps{
-		   sh 'cd html_prpject'
+		   sh 'cd html_project'
 		   sh ' mv * ..'
 		   sh 'rm -r html_project'
 		   
