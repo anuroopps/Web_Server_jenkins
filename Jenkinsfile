@@ -27,7 +27,7 @@ pipeline{
 	stage('deploy')
 	{
            steps{
-		sh 'chown jenkins:jenkins /var/www/html/'
+		sh 'chown jenkins:jenkins /var/lib/jenkins/workspace'
 			// now moving the project back into var/www/html
               sh ' mv Web_Server_jenkins/* ../../../../www/html '
 	   }
