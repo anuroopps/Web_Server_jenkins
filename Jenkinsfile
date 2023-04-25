@@ -28,7 +28,8 @@ pipeline{
 	{
            steps{
 		sh 'chown jenkins:jenkins /var/lib/jenkins/workspace'
-		   sh 'chown jenkins:jenkins ../../../www/html/'
+		   sh 'cd ../../../www/html'
+		   sh 'chown jenkins:jenkins ../../../www/html'
 			// now moving the project back into var/www/html
               sh ' mv Web_Server_jenkins/* ../../../../www/html '
 	   }
