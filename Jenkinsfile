@@ -27,7 +27,7 @@ pipeline{
 	stage('deploy')
 	{
            steps{
-		sh 'sudo chown -R jenkins:apache2 /var/www/html'
+		sh 'sudo chown -R jenkins:apache2 /var/www/html -S'
 
 			// now moving the project back into var/www/html
               sh ' mv html_project/* ../../../../www/html/ '
