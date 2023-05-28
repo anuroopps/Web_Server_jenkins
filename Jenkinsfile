@@ -21,13 +21,13 @@ pipeline{
 	{
            steps{
 			// cloning project into jekins/workspace/     this process happens everytime
-              sh ' git clone https://github.com/anuroopps/Web_Server_jenkins.git -b main'
+              sh ' git clone https://github.com/anuroopps/html_project.git -b main'
 	   }
 	}
 	stage('deploy')
 	{
            steps{
-		   sh 'sudo chown jenkins:jenkins ../../../www/html'
+		   sh 'sudo chown jenkins:jenkins html_project'
 			// now moving the project back into var/www/html
               sh ' mv html_project/* ../../../../www/html '
 	   }
