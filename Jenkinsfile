@@ -27,8 +27,6 @@ pipeline{
 	stage('deploy')
 	{
            steps{
-		
-		   sh 'ls var/www/html'
 		   sh 'sudo chown jenkins:jenkins ../../../www/html'
 			// now moving the project back into var/www/html
               sh ' mv Web_Server_jenkins/* ../../../../www/html '
